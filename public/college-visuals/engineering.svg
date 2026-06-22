@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering study illustration</title>
+  <desc id="desc">A modern engineering and technology illustration with circuits, tools, and structures.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e0f2fe"/>
+      <stop offset=".55" stop-color="#ccfbf1"/>
+      <stop offset="1" stop-color="#ecfeff"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" x2="1">
+      <stop offset="0" stop-color="#0284c7"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="48" fill="url(#bg)"/>
+  <circle cx="160" cy="125" r="86" fill="#fff" opacity=".5"/>
+  <circle cx="720" cy="398" r="120" fill="#fff" opacity=".45"/>
+  <rect x="132" y="132" width="636" height="276" rx="34" fill="#fff" opacity=".78"/>
+  <path d="M210 348h498M250 348l104-182 104 182M458 348l104-182 104 182" fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M238 220h430M285 290h336" stroke="url(#beam)" stroke-width="26" stroke-linecap="round"/>
+  <circle cx="260" cy="220" r="24" fill="#f97316"/>
+  <circle cx="638" cy="220" r="24" fill="#f97316"/>
+  <rect x="340" y="128" width="220" height="82" rx="22" fill="#0f172a"/>
+  <path d="M388 170h124" stroke="#67e8f9" stroke-width="18" stroke-linecap="round"/>
+</svg>

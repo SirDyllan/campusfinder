@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" role="img" aria-labelledby="title desc">
+  <title id="title">Medicine study illustration</title>
+  <desc id="desc">A bright medical study scene with a stethoscope, heart monitor line, and clinic shapes.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff1f2"/>
+      <stop offset="0.55" stop-color="#ffe4e6"/>
+      <stop offset="1" stop-color="#fed7aa"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" x2="1">
+      <stop offset="0" stop-color="#fb7185"/>
+      <stop offset="1" stop-color="#f97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="520" rx="48" fill="url(#bg)"/>
+  <circle cx="760" cy="105" r="88" fill="#ffffff" opacity=".55"/>
+  <circle cx="126" cy="414" r="118" fill="#ffffff" opacity=".48"/>
+  <rect x="135" y="110" width="630" height="300" rx="36" fill="#fff" opacity=".82"/>
+  <path d="M202 263h90l32-76 65 154 45-97h86l30-54 37 73h112" fill="none" stroke="#e11d48" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="382" y="146" width="138" height="138" rx="30" fill="url(#card)"/>
+  <path d="M451 180v70M416 215h70" stroke="#fff" stroke-width="26" stroke-linecap="round"/>
+  <path d="M285 345c-58 0-91-32-91-82v-58" fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="194" cy="190" r="28" fill="#0f172a"/>
+  <circle cx="286" cy="190" r="28" fill="#0f172a"/>
+  <path d="M608 345c44 0 78-34 78-78v-56" fill="none" stroke="#0f172a" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="686" cy="194" r="33" fill="#14b8a6"/>
+</svg>
