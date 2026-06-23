@@ -3,7 +3,7 @@ import Image from "next/image";
 import { CollegeLogo } from "@/components/CollegeLogo";
 import { TypingText } from "@/components/TypingText";
 import { colleges } from "@/data/colleges";
-import { getCollegeVisual, getCourseVisual } from "@/lib/college-visuals";
+import { getCourseVisual } from "@/lib/college-visuals";
 import { formatCurrency } from "@/lib/college-utils";
 
 export default function Home() {
@@ -24,8 +24,18 @@ export default function Home() {
   return (
     <div className="mesh-bg">
       <section className="relative overflow-hidden border-b border-white/70">
+        <Image
+          src="/home-design.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/82 to-white/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#eef6ff] via-transparent to-transparent" />
         <div className="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-12 px-4 py-12 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8">
-          <div className="reveal-up">
+          <div className="reveal-up relative z-10">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/70 px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm backdrop-blur">
               <span className="size-2 rounded-full bg-orange-500" />
               Explore colleges, courses, and outcomes
@@ -71,7 +81,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="reveal-up reveal-delay-2 relative">
+          <div className="reveal-up reveal-delay-2 relative z-10">
             <div className="absolute -right-8 -top-8 size-32 rounded-full bg-orange-300/50 blur-3xl" />
             <div className="absolute -bottom-10 -left-10 size-36 rounded-full bg-cyan-300/50 blur-3xl" />
             <div className="glass-panel float-slow relative rounded-3xl p-5">
@@ -94,16 +104,7 @@ export default function Home() {
                     href={`/colleges/${college.id}`}
                     className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 rounded-2xl border border-white/70 bg-white/80 p-4 shadow-sm hover:-translate-y-1 hover:border-orange-200 hover:shadow-xl"
                   >
-                    <span className="relative grid size-12 place-items-center overflow-hidden rounded-2xl bg-slate-950 text-sm font-black text-white">
-                      <Image
-                        src={getCollegeVisual(college).image}
-                        alt=""
-                        fill
-                        sizes="48px"
-                        className="object-cover opacity-55"
-                      />
-                      <span className="relative">{index + 1}</span>
-                    </span>
+                    <CollegeLogo college={college} className="size-12 rounded-2xl" sizes="48px" />
                     <span>
                       <span className="block font-bold text-slate-950 group-hover:text-orange-700">
                         {college.name}
@@ -112,7 +113,9 @@ export default function Home() {
                         {college.location} | {college.courses[0]}
                       </span>
                     </span>
-                    <CollegeLogo college={college} className="size-11 rounded-2xl" sizes="44px" />
+                    <span className="grid size-11 place-items-center rounded-2xl bg-slate-950 text-sm font-black text-white shadow-sm">
+                      {index + 1}
+                    </span>
                   </Link>
                 ))}
               </div>
@@ -193,7 +196,7 @@ export default function Home() {
               <div key={college.id} className="overflow-hidden rounded-2xl bg-white/80 shadow-sm">
                 <div className="relative h-24 w-full overflow-hidden">
                 <Image
-                  src={getCollegeVisual(college).image}
+                  src={getCourseVisual(college.courses.join(" ")).image}
                   alt={`${college.courses[0]} visual`}
                   fill
                   sizes="(min-width: 640px) 33vw, 100vw"

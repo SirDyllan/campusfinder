@@ -46,6 +46,9 @@ next-env.d.ts
 /demo-guide-render/
 /scripts/build_*_guide.py
 /college logos/
+/home design pic.jpg
+/engineering.jpg
+/medicine.jpg
 
 # local agent metadata
 /AGENTS.md
