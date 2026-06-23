@@ -43,9 +43,6 @@ export function CollegeCard({ college }: CollegeCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-slate-950/35 to-transparent" />
         <div className="absolute bottom-3 left-4 flex items-center gap-3">
           <CollegeLogo college={college} className="size-12 rounded-2xl bg-white/90 backdrop-blur" />
-          <span className="rounded-full bg-white/90 px-3 py-1 text-xs font-black text-slate-800 shadow-sm backdrop-blur">
-            {visual.label}
-          </span>
         </div>
       </div>
       <div className="flex flex-1 flex-col p-5">

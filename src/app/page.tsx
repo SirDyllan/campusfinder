@@ -9,10 +9,30 @@ import { formatCurrency } from "@/lib/college-utils";
 export default function Home() {
   const featured = colleges.slice(0, 5);
   const categories = [
-    { label: "Engineering", detail: "CS, AI, Civil, Mechanical" },
-    { label: "Medicine", detail: "Health sciences and nursing" },
-    { label: "Business", detail: "Finance, analytics, commerce" },
-    { label: "Design", detail: "UX, media, visual studies" },
+    {
+      label: "Engineering",
+      detail: "CS, AI, Civil, Mechanical",
+      image: "/study-paths/engineering.jpg",
+      query: "Engineering",
+    },
+    {
+      label: "Medicine",
+      detail: "Health sciences, medicine and nursing",
+      image: "/study-paths/medicine.jpg",
+      query: "Medicine",
+    },
+    {
+      label: "Business",
+      detail: "Finance, analytics, commerce",
+      image: "/study-paths/business.jpg",
+      query: "Business",
+    },
+    {
+      label: "Design",
+      detail: "UX, media, visual studies",
+      image: "/study-paths/design.jpg",
+      query: "Design",
+    },
   ];
   const stats = [
     { label: "Colleges", value: `${colleges.length}+` },
@@ -92,9 +112,6 @@ export default function Home() {
                   </p>
                   <h2 className="mt-2 text-2xl font-black text-slate-950">Top matches today</h2>
                 </div>
-                <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold text-white">
-                  Live MVP
-                </span>
               </div>
 
               <div className="mt-6 space-y-3">
@@ -150,13 +167,13 @@ export default function Home() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {categories.map((category) => (
             <Link
-              href="/colleges"
+              href={`/colleges?query=${encodeURIComponent(category.query)}`}
               key={category.label}
               className="hover-lift group relative min-h-64 overflow-hidden rounded-3xl border border-white/70 bg-white/80 shadow-sm backdrop-blur"
             >
               <div className="relative h-36 w-full overflow-hidden">
               <Image
-                src={getCourseVisual(category.label).image}
+                src={category.image}
                 alt={`${category.label} study path illustration`}
                 fill
                 sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"

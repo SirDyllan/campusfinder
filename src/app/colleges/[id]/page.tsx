@@ -46,9 +46,6 @@ export default async function CollegeDetailPage({
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
             <div className="absolute bottom-5 left-5 flex items-center gap-3">
               <CollegeLogo college={college} className="size-16 rounded-3xl bg-white/90 backdrop-blur" sizes="64px" />
-              <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-black text-slate-800 shadow-sm backdrop-blur">
-                {visual.label} focus
-              </span>
             </div>
           </div>
           <div className="p-6">

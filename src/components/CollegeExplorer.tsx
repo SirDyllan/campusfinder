@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { CollegeCard } from "@/components/CollegeCard";
 import { EmptyState } from "@/components/EmptyState";
 import { FilterSidebar } from "@/components/FilterSidebar";
@@ -9,7 +10,9 @@ import { colleges } from "@/data/colleges";
 import { defaultFilters, filterColleges, getCourses, getLocations } from "@/lib/college-utils";
 
 export function CollegeExplorer() {
-  const [filters, setFilters] = useState(defaultFilters);
+  const searchParams = useSearchParams();
+  const initialQuery = searchParams.get("query") ?? "";
+  const [filters, setFilters] = useState({ ...defaultFilters, query: initialQuery });
   const locations = useMemo(() => getLocations(), []);
   const courses = useMemo(() => getCourses(), []);
   const maxFees = defaultFilters.maxFees;

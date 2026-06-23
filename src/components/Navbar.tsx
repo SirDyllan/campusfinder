@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useCompare } from "@/lib/use-compare";
 
@@ -18,8 +19,15 @@ export function Navbar() {
     <header className="sticky top-0 z-30 border-b border-white/70 bg-white/75 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
       <nav aria-label="Primary navigation" className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-3 sm:gap-4 sm:px-6 sm:py-4 lg:px-8">
         <Link href="/" className="group flex min-w-0 items-center gap-2 sm:gap-3" aria-label="CampusFinder home">
-          <span className="grid size-10 place-items-center rounded-2xl bg-gradient-to-br from-orange-500 to-emerald-600 text-sm font-black text-white shadow-lg shadow-orange-500/20 group-hover:rotate-6">
-            CF
+          <span className="relative grid size-11 place-items-center overflow-hidden rounded-2xl bg-white shadow-lg shadow-orange-500/20 group-hover:rotate-3">
+            <Image
+              src="/app-logo.png"
+              alt=""
+              fill
+              sizes="44px"
+              className="object-contain p-1"
+              priority
+            />
           </span>
           <span className="hidden text-lg font-black text-slate-950 group-hover:text-orange-700 min-[380px]:inline">
             CampusFinder

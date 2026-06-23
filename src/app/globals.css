@@ -86,10 +86,7 @@ select:focus-visible {
   max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 0.08em solid #f97316;
-  animation:
-    typing 2.4s steps(18, end) both,
-    caret 780ms steps(1) infinite;
+  animation: typing 2.4s steps(18, end) both;
 }
 
 .shine {
@@ -153,12 +150,6 @@ select:focus-visible {
   }
 }
 
-@keyframes caret {
-  50% {
-    border-color: transparent;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -173,7 +164,6 @@ select:focus-visible {
 @media (max-width: 640px) {
   .typing-text {
     white-space: normal;
-    border-right: 0;
     animation: reveal-up 500ms ease both;
   }
 }
