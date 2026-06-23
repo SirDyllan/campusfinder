@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
+import { CollegeLogo } from "@/components/CollegeLogo";
 import { TypingText } from "@/components/TypingText";
 import { colleges } from "@/data/colleges";
-import { getCollegeInitials, getCollegeVisual, getCourseVisual } from "@/lib/college-visuals";
+import { getCollegeVisual, getCourseVisual } from "@/lib/college-visuals";
 import { formatCurrency } from "@/lib/college-utils";
 
 export default function Home() {
@@ -111,9 +112,7 @@ export default function Home() {
                         {college.location} | {college.courses[0]}
                       </span>
                     </span>
-                    <span className="grid size-11 place-items-center rounded-2xl bg-white text-xs font-black text-slate-950 shadow-sm">
-                      {getCollegeInitials(college.name)}
-                    </span>
+                    <CollegeLogo college={college} className="size-11 rounded-2xl" sizes="44px" />
                   </Link>
                 ))}
               </div>

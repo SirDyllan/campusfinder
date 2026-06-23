@@ -42,8 +42,10 @@ next-env.d.ts
 
 # local demo prep artifacts
 /CampusFinder_Loom_Demo_Prep.docx
+/CampusFinder_Complete_Submission_Prep.docx
 /demo-guide-render/
-/scripts/build_demo_guide.py
+/scripts/build_*_guide.py
+/college logos/
 
 # local agent metadata
 /AGENTS.md

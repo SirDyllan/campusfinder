@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { getCollegeInitials } from "@/lib/college-visuals";
+import { CollegeLogo } from "@/components/CollegeLogo";
 import { useCompare } from "@/lib/use-compare";
 
 export function CompareTray() {
@@ -29,9 +29,7 @@ export function CompareTray() {
                 key={college.id}
                 className="inline-flex max-w-full items-center gap-2 rounded-2xl bg-slate-100 px-2.5 py-2 text-xs font-bold text-slate-800"
               >
-                <span className="grid size-7 shrink-0 place-items-center rounded-xl bg-white text-[10px] font-black text-slate-950 shadow-sm">
-                  {getCollegeInitials(college.name)}
-                </span>
+                <CollegeLogo college={college} className="size-7 rounded-xl" sizes="28px" />
                 <span className="max-w-36 truncate sm:max-w-48">{college.name}</span>
                 <button
                   type="button"

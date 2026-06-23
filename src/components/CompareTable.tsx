@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { CollegeLogo } from "@/components/CollegeLogo";
 import { College } from "@/types/college";
-import { getCollegeInitials, getCollegeVisual } from "@/lib/college-visuals";
+import { getCollegeVisual } from "@/lib/college-visuals";
 import { formatCurrency } from "@/lib/college-utils";
 import { useCompare } from "@/lib/use-compare";
 import { EmptyState } from "@/components/EmptyState";
@@ -55,9 +56,7 @@ export function CompareTable({ colleges }: CompareTableProps) {
                 sizes="100vw"
                 className="object-cover"
               />
-              <span className="absolute bottom-3 left-3 grid size-11 place-items-center rounded-2xl bg-white text-xs font-black text-slate-950 shadow-sm">
-                {getCollegeInitials(college.name)}
-              </span>
+              <CollegeLogo college={college} className="absolute bottom-3 left-3 size-11 rounded-2xl" sizes="44px" />
             </div>
             <div className="p-4">
               <div className="flex items-start justify-between gap-3">
@@ -108,9 +107,7 @@ export function CompareTable({ colleges }: CompareTableProps) {
                         sizes="(min-width: 768px) 20vw, 50vw"
                         className="object-cover opacity-85"
                       />
-                      <span className="absolute bottom-2 left-2 grid size-9 place-items-center rounded-xl bg-white text-xs font-black text-slate-950">
-                        {getCollegeInitials(college.name)}
-                      </span>
+                      <CollegeLogo college={college} className="absolute bottom-2 left-2 size-9 rounded-xl" sizes="36px" />
                     </div>
                     <Link href={`/colleges/${college.id}`} className="font-black text-white hover:text-orange-200">
                       {college.name}

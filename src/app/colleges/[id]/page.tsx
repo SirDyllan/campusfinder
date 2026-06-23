@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import { CollegeLogo } from "@/components/CollegeLogo";
 import { CompareButton } from "@/components/CompareButton";
 import { TypingText } from "@/components/TypingText";
 import { colleges } from "@/data/colleges";
-import { getCollegeInitials, getCollegeVisual } from "@/lib/college-visuals";
+import { getCollegeVisual } from "@/lib/college-visuals";
 import { formatCurrency, getCollegeById } from "@/lib/college-utils";
 
 export function generateStaticParams() {
@@ -44,9 +45,7 @@ export default async function CollegeDetailPage({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
             <div className="absolute bottom-5 left-5 flex items-center gap-3">
-              <span className="grid size-16 place-items-center rounded-3xl bg-white/90 text-lg font-black text-slate-950 shadow-xl backdrop-blur">
-                {getCollegeInitials(college.name)}
-              </span>
+              <CollegeLogo college={college} className="size-16 rounded-3xl bg-white/90 backdrop-blur" sizes="64px" />
               <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-black text-slate-800 shadow-sm backdrop-blur">
                 {visual.label} focus
               </span>
