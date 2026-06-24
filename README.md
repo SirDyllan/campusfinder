@@ -84,19 +84,6 @@ This structure was chosen to demonstrate frontend engineering fundamentals: sepa
 - Authentication, saved accounts, and application workflows are outside the MVP scope.
 - AI assistance was used as a productivity aid, but the implementation decisions, architecture, testing, and final submission are reviewed and owned by the developer.
 
-## Loom Demo Guide
-
-A strong 3 to 5 minute demo can follow this flow:
-
-1. Start on the homepage and explain the goal: a modern student-friendly college discovery portal.
-2. Open `/colleges` and show search by college name or course.
-3. Use filters for location, course, fees, rating, and public/private type.
-4. Add two colleges to compare and point out the persistent compare tray.
-5. Refresh the page to show comparison selections persist through `localStorage`.
-6. Open `/compare` and show the side-by-side desktop table or mobile card comparison.
-7. Open a college detail page and show overview, visual hero, courses, admission info, reviews, and compare action.
-8. Demonstrate edge cases briefly: no filter results, duplicate compare add, max 3 colleges, and an invalid detail URL such as `/colleges/not-real`.
-9. Close with architecture: `app` routes, reusable `components`, typed `data`, shared `lib` utilities, and focused state management.
 
 ## Vercel Submission Checklist
 
